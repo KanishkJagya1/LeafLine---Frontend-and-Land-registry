@@ -5,7 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background: url('../assets/image.png') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -46,27 +46,15 @@ body {
   outline: none;
   border-radius: 40px;
   padding-left: 20px;
-  color: #ffffff;
+  color: #fff;
   font-size: 18px;
 }
 
 .input-box .icon {
   position: absolute;
   right: 20px;
-  color: #000000;
+  color: #fff;
   font-size: 18px;
-}
-
-.remmeber-forgot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-}
-
-.remmeber-forgot a {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 button {
@@ -86,12 +74,11 @@ button:hover {
   background: #ddd;
 }
 
-.register-link {
+.login-link {
   margin-top: 20px;
 }
 
-.register-link a {
+.login-link a {
   color: #fff;
   text-decoration: none;
 }
-

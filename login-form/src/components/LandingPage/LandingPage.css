@@ -1,0 +1,266 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #4caf50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar .nav-links li {
+    display: inline;
+  }
+  
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header-content {
+    padding: 2rem;
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+  }
+  
+  .header-content .btn {
+    background-color: white;
+    color: #4caf50;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .feature-card .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+  }
+  
+  /* Products Section */
+  .products {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  .products h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-card p {
+    font-size: 1rem;
+  }
+  
+  /* Reviews Section */
+  .reviews {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .review-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .review-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .review-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Blog Section */
+  .blog {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  .blog h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .blog-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-card p {
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    padding: 2rem 0;
+  }
+  
+  .footer-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-form input[type="email"] {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .newsletter-form .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+  }

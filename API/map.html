@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([28.7041, 77.1025], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var landRecords = [
+        [
+    {
+        "land_id": "X001",
+        "owner": "Kanishk Jagya",
+        "latitude": 28.7041,
+        "longitude": 77.1025,
+        "tehsil": "New Delhi",
+        "district": "Central Delhi",
+        "postal_code": "110001",
+        "geofence": [
+            [28.705, 77.100],
+            [28.703, 77.100],
+            [28.703, 77.105],
+            [28.705, 77.105]
+        ]
+    },
+    {
+        "land_id": "X002",
+        "owner": "Rohit Sharma",
+        "latitude": 28.5355,
+        "longitude": 77.3910,
+        "tehsil": "Noida",
+        "district": "Gautam Buddh Nagar",
+        "postal_code": "201301",
+        "geofence": [
+            [28.537, 77.389],
+            [28.534, 77.389],
+            [28.534, 77.393],
+            [28.537, 77.393]
+        ]
+    },
+    {
+        "land_id": "X003",
+        "owner": null,
+        "latitude": 28.4595,
+        "longitude": 77.0266,
+        "tehsil": "Gurgaon",
+        "district": "Gurgaon",
+        "postal_code": "122001",
+        "geofence": [
+            [28.460, 77.025],
+            [28.458, 77.025],
+            [28.458, 77.028],
+            [28.460, 77.028]
+        ]
+    },
+    {
+        "land_id": "X004",
+        "owner": "Ananya Pandey",
+        "latitude": 28.4089,
+        "longitude": 77.3178,
+        "tehsil": "Faridabad",
+        "district": "Faridabad",
+        "postal_code": "121002",
+        "geofence": [
+            [28.410, 77.316],
+            [28.407, 77.316],
+            [28.407, 77.319],
+            [28.410, 77.319]
+        ]
+    },
+    {
+        "land_id": "X005",
+        "owner": null,
+        "latitude": 28.6139,
+        "longitude": 77.2090,
+        "tehsil": "Delhi",
+        "district": "New Delhi",
+        "postal_code": "110003",
+        "geofence": [
+            [28.615, 77.207],
+            [28.612, 77.207],
+            [28.612, 77.211],
+            [28.615, 77.211]
+        ]
+    },
+    {
+        "land_id": "X006",
+        "owner": "Virat Kohli",
+        "latitude": 28.7041,
+        "longitude": 77.1025,
+        "tehsil": "New Delhi",
+        "district": "Central Delhi",
+        "postal_code": "110004",
+        "geofence": [
+            [28.705, 77.100],
+            [28.703, 77.100],
+            [28.703, 77.105],
+            [28.705, 77.105]
+        ]
+    },
+    {
+        "land_id": "X007",
+        "owner": "Priya Singh",
+        "latitude": 28.5355,
+        "longitude": 77.3910,
+        "tehsil": "Noida",
+        "district": "Gautam Buddh Nagar",
+        "postal_code": "201302",
+        "geofence": [
+            [28.537, 77.389],
+            [28.534, 77.389],
+            [28.534, 77.393],
+            [28.537, 77.393]
+        ]
+    },
+    {
+        "land_id": "X008",
+        "owner": null,
+        "latitude": 28.4595,
+        "longitude": 77.0266,
+        "tehsil": "Gurgaon",
+        "district": "Gurgaon",
+        "postal_code": "122002",
+        "geofence": [
+            [28.460, 77.025],
+            [28.458, 77.025],
+            [28.458, 77.028],
+            [28.460, 77.028]
+        ]
+    },
+    {
+        "land_id": "X009",
+        "owner": "Rahul Dravid",
+        "latitude": 28.4089,
+        "longitude": 77.3178,
+        "tehsil": "Faridabad",
+        "district": "Faridabad",
+        "postal_code": "121003",
+        "geofence": [
+            [28.410, 77.316],
+            [28.407, 77.316],
+            [28.407, 77.319],
+            [28.410, 77.319]
+        ]
+    },
+    {
+        "land_id": "X010",
+        "owner": "Deepika Padukone",
+        "latitude": 28.6139,
+        "longitude": 77.2090,
+        "tehsil": "Delhi",
+        "district": "New Delhi",
+        "postal_code": "110005",
+        "geofence": [
+            [28.615, 77.207],
+            [28.612, 77.207],
+            [28.612, 77.211],
+            [28.615, 77.211]
+        ]
+    },
+    {
+        "land_id": "X011",
+        "owner": null,
+        "latitude": 28.7041,
+        "longitude": 77.1025,
+        "tehsil": "New Delhi",
+        "district": "Central Delhi",
+        "postal_code": "110006",
+        "geofence": [
+            [28.705, 77.100],
+            [28.703, 77.100],
+            [28.703, 77.105],
+            [28.705, 77.105]
+        ]
+    },
+    {
+        "land_id": "X012",
+        "owner": "Amitabh Bachchan",
+        "latitude": 28.5355,
+        "longitude": 77.3910,
+        "tehsil": "Noida",
+        "district": "Gautam Buddh Nagar",
+        "postal_code": "201303",
+        "geofence": [
+            [28.537, 77.389],
+            [28.534, 77.389],
+            [28.534, 77.393],
+            [28.537, 77.393]
+        ]
+    }
+]
+
+            // Add other records as needed
+        ];
+
+        landRecords.forEach(record => {
+            var polygon = L.polygon(record.geofence, { color: 'blue' }).addTo(map);
+            polygon.bindPopup(`<b>Owner:</b> Kanishk Jagya<br><b>Coordinates:</b> ${record.latitude}, ${record.longitude}`);
+        });
+    </script>
+</body>
+</html>

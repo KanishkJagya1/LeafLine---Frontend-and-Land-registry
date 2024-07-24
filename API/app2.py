@@ -34,7 +34,7 @@ def calculate_green_percentage(image_path):
     light_green_pixels = cv2.countNonZero(light_green_mask)
 
     # Calculate the total number of pixels
-    total_pixels = image.shape[0] * image.shape[1]
+    total_pixels = image.shape[0] * image.shape[0]
 
     # Calculate the percentage of dark green and light green pixels
     dark_green_percentage = (dark_green_pixels / total_pixels) * 100

@@ -1,9 +1,8 @@
-// src/RegisterLandForm.js
 import React, { useState } from 'react';
+import { TextField, Button, Container, Typography, Box } from '@mui/material';
 import axios from 'axios';
-import { Container, TextField, Button, Typography, Box } from '@mui/material';
 
-function RegisterLandForm() {
+const RegisterLandForm = () => {
   const [formData, setFormData] = useState({
     landAlias: '',
     location: '',
@@ -21,17 +20,8 @@ function RegisterLandForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Dummy calculation for Green Credit points
-    const greenCreditPoints = parseFloat(formData.greenCover) * 0.1;
-
     try {
-      const response = await axios.post('http://localhost:5000/register_land', {
-        ...formData,
-        area: parseFloat(formData.area),
-        greenCover: parseFloat(formData.greenCover),
-        greenCreditPoints
-      });
+      const response = await axios.post('http://localhost:5000/register_land', formData);
       setMessage(response.data.message);
     } catch (error) {
       console.error('Error:', error);
@@ -75,9 +65,8 @@ function RegisterLandForm() {
             required
           />
           <TextField
-            label="Green Cover (sq meters)"
+            label="Green Cover"
             name="greenCover"
-            type="number"
             value={formData.greenCover}
             onChange={handleChange}
             fullWidth
@@ -116,6 +105,6 @@ function RegisterLandForm() {
       </Box>
     </Container>
   );
-}
+};
 
 export default RegisterLandForm;
